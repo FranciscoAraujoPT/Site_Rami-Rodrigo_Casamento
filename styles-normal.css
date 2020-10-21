@@ -111,7 +111,8 @@ body {
 
 .card-product{
   margin: 10px;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
+  height: max-content;
   background-color: rgb(218, 218, 218);
 }
 
@@ -234,7 +235,7 @@ Columns
 .column-50 img {
   vertical-align: middle;
   width: 100%;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .progress {
@@ -245,7 +246,7 @@ Columns
 
 /* Dropdown Button */
 .buy {
-  background-color: #2196F3;
+  background-color: #333;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -285,7 +286,12 @@ Columns
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .buy:hover, .dropdown:hover .buy  {
-  background-color: #0b7dda;
+  background-color: #222;
+}
+
+.button-product {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 @media only screen and (min-width: 748px) {
@@ -304,6 +310,74 @@ Columns
     max-width: 50%;
   }
 
-  
+  .column-50 img {
+    border-radius: 5px 0px 0px 5px;
+  }
 
+  .card-product h5 {
+    margin-top: 5%;
+    font-size: 1.25rem;
+  }
+
+  .card-product p {
+    margin-top: 5%;
+    font-size: 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 900px) {
+  .card-product h5 {
+    font-size: 1.5rem;
+  }
+
+  .card-product p {
+    font-size: 1.20rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-product h5 {
+    font-size: 2rem;
+  }
+
+  .card-product p {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .progress {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .card-product h5 {
+    font-size: 2.5rem;
+  }
+
+  .card-product p {
+    font-size: 1.5rem;
+  }
+
+  .progress {
+    margin-top: 15%;
+  }
+
+}
+
+@media only screen and (min-width: 2400px) {
+
+  .card-product h5 {
+    font-size: 3rem;
+  }
+
+  .card-product p {
+    font-size: 2rem;
+  }
+
+  .progress {
+    margin-top: 20%;
+  }
 }
