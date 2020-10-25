@@ -23,18 +23,27 @@ var ringer = {
       max: 100
     }
    },
+
+  
   r_count: 5,
   r_spacing: 10, // px
-  r_size: 100, // px
-  r_thickness: 2, // px
+  r_size: 150, // px
+  r_thickness: 8, // px
   update_interval: 11, // ms
     
     
-  init: function(){
-   
+  init: function(){   
+  
     $r = ringer;
     $r.cvs = document.createElement('canvas'); 
     
+    if ($(window).width() <= 400) {  
+      $r.r_count = 4;
+      $r.r_spacing = 5; // px
+      $r.r_size = 75; // px
+      $r.r_thickness = 5; // px
+    }
+
     $r.size = { 
       w: ($r.r_size + $r.r_thickness) * $r.r_count + ($r.r_spacing*($r.r_count-1)), 
       h: ($r.r_size + $r.r_thickness) 
@@ -101,13 +110,21 @@ var ringer = {
     
     // label
     $r.ctx.fillStyle = "rgb(218, 218, 218)";
-   
-    $r.ctx.font = '12px Helvetica';
-    $r.ctx.fillText(label, 0, 23);
-    $r.ctx.fillText(label, 0, 23);   
+    if ($(window).width() > 400) {
+      $r.ctx.font = '1rem Helvetica';
+      $r.ctx.fillText(label, 0, 30);
+    } else {
+      $r.ctx.font = '0.75rem Helvetica';
+      $r.ctx.fillText(label, 0, 20);
+    }
     
-    $r.ctx.font = 'bold 40px Helvetica';
-    $r.ctx.fillText(Math.floor(value), 0, 10);
+    if ($(window).width() > 400) {
+      $r.ctx.font = 'bold 3.5rem Helvetica';
+      $r.ctx.fillText(Math.floor(value), 0, 10);
+    } else {
+      $r.ctx.font = 'bold 2rem Helvetica';
+      $r.ctx.fillText(Math.floor(value), 0, 5);
+    }
     
     $r.ctx.restore();
   }

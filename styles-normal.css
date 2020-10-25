@@ -140,8 +140,6 @@ body {
 
 /* Countdown*/
 canvas {
-  width: 900px;
-  height: 300px;
   display: block;
   position: relative;
   background: transparent;
