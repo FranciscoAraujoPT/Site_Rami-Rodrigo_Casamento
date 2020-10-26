@@ -1,3 +1,7 @@
+@font-face {
+  font-family:Bodoni;
+  src: url("Bodoni 72 Smallcaps Book.ttf");
+}
 
 /* Links */
 a,
@@ -59,7 +63,9 @@ body {
 
 
 .inner .nav-link{
+  font-family: Bodoni;
   font-weight: 700;
+  font-size: 1.25rem;
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
   border-bottom: solid transparent;
@@ -99,8 +105,8 @@ body {
 }
 
 @media only screen and (min-width: 748px) {
-  .nav-link {
-    font-size: 1.25rem;
+  .inner .nav-link {
+    font-size: 1.75rem;
   }
 }
 

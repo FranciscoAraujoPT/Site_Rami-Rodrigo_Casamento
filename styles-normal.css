@@ -1,6 +1,11 @@
 /*
  * Globals
  */
+@font-face {
+  font-family:Bodoni;
+  src: url("Bodoni 72 Smallcaps Book.ttf");
+}
+
 
 /* Links */
 a,
@@ -28,7 +33,6 @@ a:hover {
 
 html,
 body {
-  background-color: #333;
   overflow: auto;
   height: 100%;
   background-color: #333;
@@ -41,6 +45,19 @@ body {
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.75);
 }
 
+.container-localHora h2, .container-localHora h3, .container-localHora p {
+  color: rgb(218, 218, 218);
+}
+
+.container-localHora p {
+  margin: 0;
+}
+
+.container-localHora h2, .container-localHora h3{
+  font-family: Bodoni;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
 
 .Logo > img {
   height: 15rem;
@@ -70,6 +87,7 @@ body {
 }
 
 .inner .nav-link{
+  font-family: Bodoni;
   font-weight: 700;
   color: #808080;
   background-color: transparent;
@@ -122,8 +140,12 @@ body {
 }
 
 #map {
-  height: 400px;  /* The height is 400 pixels */
-  width: 100%;  /* The width is the width of the web page */
+  height: 350px;  /* The height is 350 pixels */
+  width: 90%;  /* The width is the width of the web page */
+  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-left: 5%;
+  border-radius: 12px;
 }
 
 #countdown{
@@ -379,9 +401,17 @@ label {
 }
 
 @media only screen and (min-width: 748px) {
-  .nav-link {
-    font-size: 1.25rem;
+
+  #map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+    margin-left: 0%;
   }
+
+  .nav-link {
+    font-size: 1.75rem;
+  }
+  
   .column-s {
     -ms-flex: 25%;
     flex: 25%;
