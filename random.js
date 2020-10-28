@@ -17,7 +17,23 @@ function randOrder(array){
   return array;
 }
 
-window.onload = function renderGalleryItem(){
+const blur = async () => {
+  const items = await renderGalleryItem()
+  // do something else here after firstFunction completes
+  for(let index=0;index<numImagesAvailable;index++){
+    var imagem = document.getElementsByClassName("image")[index];
+    for(let i=0;i<numImagesAvailable;i++){
+      let data = imagem.getAttribute('data-src');
+      if(data.localeCompare(items[i]) == 0){
+        imagem.setAttribute("src", data);
+        items[i] = items[numImagesAvailable-index];
+        console.log(data);
+      }
+    }
+  }
+}
+
+async function renderGalleryItem(){
 
   let items = [],
       itemsSmall = [];
@@ -37,6 +53,7 @@ window.onload = function renderGalleryItem(){
 
   
   ranNums = randOrder(ranNums);
+  let col1, col2, col3 ,col4;
 
   for(let i=0;i<numImagesAvailable;i++){ 
     var imagem = document.createElement("IMG");
@@ -52,10 +69,10 @@ window.onload = function renderGalleryItem(){
     div.setAttribute("class", "lista");
     div.appendChild(link)
 
-    let col1 = document.getElementsByClassName("column-s")[0].offsetHeight;
-    let col2 = document.getElementsByClassName("column-s")[1].offsetHeight;
-    let col3 = document.getElementsByClassName("column-s")[2].offsetHeight;
-    let col4 = document.getElementsByClassName("column-s")[3].offsetHeight;
+    col1 = document.getElementsByClassName("column-s")[0].scrollHeight;
+    col2 = document.getElementsByClassName("column-s")[1].scrollHeight;
+    col3 = document.getElementsByClassName("column-s")[2].scrollHeight;
+    col4 = document.getElementsByClassName("column-s")[3].scrollHeight;
     
 
     switch(Math.min(col1, col2, col3, col4)){
@@ -76,6 +93,10 @@ window.onload = function renderGalleryItem(){
     }
 
     console.log(col1, col2, col3, col4);
+    await new Promise(r => setTimeout(r, 10));
   }
+  return items;
 }
+
+blur();
 
