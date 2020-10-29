@@ -93,7 +93,7 @@ async function renderGalleryItem(){
     }
 
     console.log(col1, col2, col3, col4);
-    await new Promise(r => setTimeout(r, 10));
+    await new Promise(r => setTimeout(r, 50));
   }
   return items;
 }
