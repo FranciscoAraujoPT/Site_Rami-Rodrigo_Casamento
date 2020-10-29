@@ -112,6 +112,14 @@ body {
  * Cover
  */
 
+
+ .card-product{
+  margin: 10px;
+  border-radius: 5px;
+  height: max-content;
+  background-color: rgb(218, 218, 218);
+}
+
 #map {
   height: 350px;  /* The height is 350 pixels */
   width: 90%;  /* The width is the width of the web page */
