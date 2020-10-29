@@ -27,7 +27,7 @@ const blur = async () => {
       if(data.localeCompare(items[i]) == 0){
         imagem.setAttribute("src", data);
         items[i] = items[numImagesAvailable-index];
-        console.log(data);
+        break;
       }
     }
   }
@@ -92,7 +92,6 @@ async function renderGalleryItem(){
         window.alert("Erro! :(");
     }
 
-    console.log(col1, col2, col3, col4);
     await new Promise(r => setTimeout(r, 50));
   }
   return items;
