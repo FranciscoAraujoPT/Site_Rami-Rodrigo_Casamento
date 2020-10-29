@@ -37,7 +37,7 @@ var ringer = {
     $r = ringer;
     $r.cvs = document.createElement('canvas'); 
     
-    if ($(window).width() <= 400) {  
+    if ($(window).width() <= 450) {  
       $r.r_count = 4;
       $r.r_spacing = 5; // px
       $r.r_size = 75; // px
@@ -110,7 +110,7 @@ var ringer = {
     
     // label
     $r.ctx.fillStyle = "rgb(218, 218, 218)";
-    if ($(window).width() > 400) {
+    if ($(window).width() > 450) {
       $r.ctx.font = '1rem Helvetica';
       $r.ctx.fillText(label, 0, 30);
     } else {
@@ -118,7 +118,7 @@ var ringer = {
       $r.ctx.fillText(label, 0, 20);
     }
     
-    if ($(window).width() > 400) {
+    if ($(window).width() > 450) {
       $r.ctx.font = 'bold 3.5rem Helvetica';
       $r.ctx.fillText(Math.floor(value), 0, 10);
     } else {
