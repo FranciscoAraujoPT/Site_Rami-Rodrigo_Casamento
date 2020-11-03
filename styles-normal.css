@@ -123,7 +123,7 @@ body {
 #map {
   height: 350px;  /* The height is 350 pixels */
   width: 90%;  /* The width is the width of the web page */
-  margin-bottom: 5%;
+  margin-bottom: 0;
   margin-top: 5%;
   margin-left: 5%;
   border-radius: 12px;
@@ -139,6 +139,7 @@ body {
  * Footer
  */
 .mastfoot {
+  padding-top: 5%;
   color: rgba(255, 255, 255, .5);
 }
 
