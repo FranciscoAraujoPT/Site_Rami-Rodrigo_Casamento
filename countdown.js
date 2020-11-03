@@ -111,18 +111,18 @@ var ringer = {
     // label
     $r.ctx.fillStyle = "rgb(218, 218, 218)";
     if ($(window).width() > 450) {
-      $r.ctx.font = '1rem Helvetica';
+      $r.ctx.font = '18px Helvetica';
       $r.ctx.fillText(label, 0, 30);
     } else {
-      $r.ctx.font = '0.75rem Helvetica';
+      $r.ctx.font = '10px Helvetica';
       $r.ctx.fillText(label, 0, 20);
     }
     
     if ($(window).width() > 450) {
-      $r.ctx.font = 'bold 3.5rem Helvetica';
+      $r.ctx.font = 'bold 55px Helvetica';
       $r.ctx.fillText(Math.floor(value), 0, 10);
     } else {
-      $r.ctx.font = 'bold 2rem Helvetica';
+      $r.ctx.font = 'bold 30px Helvetica';
       $r.ctx.fillText(Math.floor(value), 0, 5);
     }
     
